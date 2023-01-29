@@ -1,4 +1,4 @@
-package ru.cft.shift2023winter.data.network
+package ru.cft.shift2023winter.data.network.api
 
 import retrofit2.http.GET
 import ru.cft.shift2023winter.data.network.model.CharacterResponseDto
@@ -7,11 +7,11 @@ import ru.cft.shift2023winter.data.network.model.LocationResponseDto
 
 interface RickAndMortyApi {
     @GET("character")
-    suspend fun getCharacterList(): CharacterResponseDto
+    suspend fun getCharacterResponse(): CharacterResponseDto
 
     @GET("episode")
-    suspend fun getEpisodeList(): EpisodeResponseDto
+    suspend fun getEpisodeResponse(): EpisodeResponseDto
 
     @GET("location")
-    suspend fun getLocationList(): LocationResponseDto
+    suspend fun getLocationResponse(): LocationResponseDto
 }

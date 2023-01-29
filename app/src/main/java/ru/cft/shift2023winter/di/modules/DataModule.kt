@@ -2,8 +2,8 @@ package ru.cft.shift2023winter.di.modules
 
 import dagger.Module
 import dagger.Provides
-import ru.cft.shift2023winter.data.network.ApiFactory
-import ru.cft.shift2023winter.data.network.RickAndMortyApi
+import ru.cft.shift2023winter.data.network.api.ApiFactory
+import ru.cft.shift2023winter.data.network.api.RickAndMortyApi
 import ru.cft.shift2023winter.di.annotations.ApplicationScope
 
 @Module
