@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import ru.cft.shift2023winter.data.mapper.Mapper
 import ru.cft.shift2023winter.data.network.api.RickAndMortyApi
-import ru.cft.shift2023winter.domain.RickAndMortyRepository
+import ru.cft.shift2023winter.domain.repository.RickAndMortyRepository
 import ru.cft.shift2023winter.domain.entities.Character
 import ru.cft.shift2023winter.domain.entities.Episode
 import ru.cft.shift2023winter.domain.entities.Location

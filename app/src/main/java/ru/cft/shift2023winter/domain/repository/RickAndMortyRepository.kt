@@ -1,4 +1,4 @@
-package ru.cft.shift2023winter.domain
+package ru.cft.shift2023winter.domain.repository
 
 import kotlinx.coroutines.flow.Flow
 import ru.cft.shift2023winter.domain.entities.Character
