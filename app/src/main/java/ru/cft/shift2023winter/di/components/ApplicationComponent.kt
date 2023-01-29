@@ -1,4 +1,4 @@
-package ru.cft.shift2023winter.di
+package ru.cft.shift2023winter.di.components
 
 import android.app.Application
 import dagger.BindsInstance
