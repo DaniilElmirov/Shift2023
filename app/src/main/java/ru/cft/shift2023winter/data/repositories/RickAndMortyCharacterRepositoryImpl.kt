@@ -9,15 +9,8 @@ import javax.inject.Inject
 class RickAndMortyCharacterRepositoryImpl @Inject constructor(
     private val characterDtoMapper: CharacterDtoMapper,
     private val api: RickAndMortyApi,
-): RickAndMortyCharacterRepository {
+) : RickAndMortyCharacterRepository {
 
-    override suspend fun getCharacterList(): List<Character> {
-        val characterDtoList = api.getCharacterResponse().results
-
-        val characterList = characterDtoList.map {
-            characterDtoMapper(it)
-        }
-
-        return characterList
-    }
+    override suspend fun getCharacterList(): List<Character> =
+        api.getCharacterResponse().results.map { characterDtoMapper(it) }
 }

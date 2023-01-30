@@ -9,15 +9,8 @@ import javax.inject.Inject
 class RickAndMortyEpisodeRepositoryImpl @Inject constructor(
     private val episodeDtoMapper: EpisodeDtoMapper,
     private val api: RickAndMortyApi,
-): RickAndMortyEpisodeRepository {
+) : RickAndMortyEpisodeRepository {
 
-    override suspend fun getEpisodeList(): List<Episode> {
-        val episodeDtoList = api.getEpisodeResponse().results
-
-        val episodeList = episodeDtoList.map {
-            episodeDtoMapper(it)
-        }
-
-        return episodeList
-    }
+    override suspend fun getEpisodeList(): List<Episode> =
+        api.getEpisodeResponse().results.map { episodeDtoMapper(it) }
 }
