@@ -1,12 +1,11 @@
 package ru.cft.shift2023winter.domain.usecases
 
-import kotlinx.coroutines.flow.Flow
-import ru.cft.shift2023winter.domain.repository.RickAndMortyRepository
 import ru.cft.shift2023winter.domain.entities.Location
+import ru.cft.shift2023winter.domain.repositories.RickAndMortyLocationRepository
 import javax.inject.Inject
 
-class GetLocationListUseCase @Inject constructor(private val rickAndMortyRepository: RickAndMortyRepository) {
+class GetLocationListUseCase @Inject constructor(private val rickAndMortyLocationRepository: RickAndMortyLocationRepository) {
 
-    operator fun invoke(): Flow<List<Location>> =
-        rickAndMortyRepository.getLocationList()
+    suspend operator fun invoke(): List<Location> =
+        rickAndMortyLocationRepository.getLocationList()
 }
