@@ -3,7 +3,9 @@ package ru.cft.shift2023winter.di.modules
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import ru.cft.shift2023winter.data.network.api.ApiFactory
+import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.create
 import ru.cft.shift2023winter.data.network.api.RickAndMortyApi
 import ru.cft.shift2023winter.data.repositories.RickAndMortyCharacterRepositoryImpl
 import ru.cft.shift2023winter.data.repositories.RickAndMortyEpisodeRepositoryImpl
@@ -28,11 +30,18 @@ interface DataModule {
     @Binds
     fun bindRickAndMortyLocationRepository(impl: RickAndMortyLocationRepositoryImpl): RickAndMortyLocationRepository
 
-    companion object{
+    companion object {
+        private const val BASE_URL = "https://rickandmortyapi.com/api/"
+
         @ApplicationScope
         @Provides
-        fun provideRickAndMortyApi(): RickAndMortyApi {
-            return ApiFactory.api
-        }
+        fun provideRetrofit(): Retrofit = Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .build()
+
+        @ApplicationScope
+        @Provides
+        fun provideRickAndMortyApi(retrofit: Retrofit): RickAndMortyApi = retrofit.create()
     }
 }
