@@ -2,8 +2,9 @@ package ru.cft.shift2023winter.data.mappers
 
 import ru.cft.shift2023winter.data.network.model.CharacterDto
 import ru.cft.shift2023winter.domain.entities.Character
+import javax.inject.Inject
 
-class CharacterDtoMapper {
+class CharacterDtoMapper @Inject constructor(){
 
     operator fun invoke(characterDto: CharacterDto) = Character(
         id = characterDto.id,
@@ -12,8 +13,8 @@ class CharacterDtoMapper {
         species = characterDto.species,
         type = characterDto.type,
         gender = characterDto.gender,
-        location = characterDto.location,
-        origin = characterDto.origin,
+        //location = characterDto.location,
+        //origin = characterDto.origin,
         image = characterDto.image,
         episode = characterDto.episode,
         url = characterDto.url,
