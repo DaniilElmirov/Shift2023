@@ -5,7 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import ru.cft.shift2023winter.di.annotations.ApplicationScope
 import ru.cft.shift2023winter.di.modules.DataModule
-import ru.cft.shift2023winter.presentation.RickAndMortyApplication
+import ru.cft.shift2023winter.presentation.MainActivity
 
 @ApplicationScope
 @Component(
@@ -15,7 +15,7 @@ import ru.cft.shift2023winter.presentation.RickAndMortyApplication
 )
 interface ApplicationComponent {
 
-    fun inject(application: RickAndMortyApplication)
+    fun inject(activity: MainActivity)
 
     @Component.Factory
     interface Factory {
@@ -23,5 +23,4 @@ interface ApplicationComponent {
             @BindsInstance application: Application
         ): ApplicationComponent
     }
-
 }
