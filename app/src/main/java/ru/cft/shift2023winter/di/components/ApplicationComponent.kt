@@ -5,12 +5,14 @@ import dagger.BindsInstance
 import dagger.Component
 import ru.cft.shift2023winter.di.annotations.ApplicationScope
 import ru.cft.shift2023winter.di.modules.DataModule
+import ru.cft.shift2023winter.di.modules.ViewModelModule
 import ru.cft.shift2023winter.presentation.MainActivity
 
 @ApplicationScope
 @Component(
     modules = [
-        DataModule::class
+        DataModule::class,
+        ViewModelModule::class,
     ]
 )
 interface ApplicationComponent {
@@ -20,7 +22,7 @@ interface ApplicationComponent {
     @Component.Factory
     interface Factory {
         fun create(
-            @BindsInstance application: Application
+            @BindsInstance application: Application,
         ): ApplicationComponent
     }
 }
