@@ -5,7 +5,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import ru.cft.shift2023winter.di.annotations.ViewModelKey
-import ru.cft.shift2023winter.presentation.MainViewModel
+import ru.cft.shift2023winter.presentation.viewmodel.MainViewModel
 
 @Module
 interface ViewModelModule {

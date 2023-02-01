@@ -1,4 +1,4 @@
-package ru.cft.shift2023winter.presentation
+package ru.cft.shift2023winter.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
