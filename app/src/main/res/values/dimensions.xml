@@ -6,4 +6,6 @@
     <dimen name="margin_20">20dp</dimen>
 
     <dimen name="radius_20">20dp</dimen>
+
+    <dimen name="height_400">400dp</dimen>
 </resources>
