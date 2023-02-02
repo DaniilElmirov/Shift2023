@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.cft.shift2023winter.screen.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/show_character_detail"
+            app:destination="@id/characterDetailsFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="ru.cft.shift2023winter.screen.CharacterDetailsFragment"
+        android:label="CharacterDetailsFragment" >
+        <argument
+            android:name="character"
+            app:argType="ru.cft.shift2023winter.domain.entities.Character" />
+    </fragment>
+</navigation>

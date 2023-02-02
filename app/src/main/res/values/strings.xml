@@ -1,3 +1,11 @@
 <resources>
-	<string name="app_name">SHIFT 2023 Winter</string>
+    <string name="app_name">SHIFT 2023 Winter</string>
+
+    <string name="title_status">Status: </string>
+    <string name="title_name">Name: </string>
+    <string name="title_gender">Gender: </string>
+    <string name="title_species">Species: </string>
+    <string name="title_type">Type: </string>
+    <string name="title_origin">Origin: </string>
+    <string name="title_location">Location: </string>
 </resources>

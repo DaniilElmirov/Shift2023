@@ -1,5 +1,9 @@
 package ru.cft.shift2023winter.domain.entities
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Character(
     val id: Int,
     val name: String,
@@ -13,4 +17,4 @@ data class Character(
     val episode: List<String>,
     val url: String,
     val created: String,
-)
+): Parcelable
