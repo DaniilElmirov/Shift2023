@@ -1,13 +1,18 @@
 package ru.cft.shift2023winter.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import ru.cft.shift2023winter.R
 
 class MainActivity : AppCompatActivity() {
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_main)
-	}
+    private val component by lazy {
+        (application as RickAndMortyApplication).component
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        component.inject(this)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
 }

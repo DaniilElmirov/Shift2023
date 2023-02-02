@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.cft.shift2023winter.presentation.MainFragment"
+        android:name="ru.cft.shift2023winter.screen.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/show_character_detail"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/characterDetailsFragment"
-        android:name="ru.cft.shift2023winter.presentation.CharacterDetailsFragment"
+        android:name="ru.cft.shift2023winter.screen.CharacterDetailsFragment"
         android:label="CharacterDetailsFragment" >
         <argument
             android:name="character"
